@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack's AI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" href="./images/Mvlogo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.css" integrity="sha512-0Nyh7Nf4sn+T48aTb6VFkhJe0FzzcOlqqZMahy/rhZ8Ii5Q9ZXG/1CbunUuEbfgxqsQfWXjnErKZosDSHVKQhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="chatbot-popup">
+      <!-- Your existing chatbot structure -->
+      <div class="chat-footer">
+        <form action="#" class="chat-form">
+          <textarea placeholder="Message..." class="message-input" required></textarea>
+          <div class="chat-controls">
+            <button type="button" class="material-symbols-rounded" id="emoji">sentiment_satisfied</button>
+            <div class="file-upload-wrapper">
+              <input type="file" accept="images/*" id="file-input" hidden>
+              <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+            </div>
+            <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js" integrity="sha512-hkvXFLlESjeYENO4CNi69z3A1puvONQV5Uh+G4TUDayZxSLyic5Kba9hhuiNLbHqdnKNMk2PxXKm0v7KDnWkYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      $(document).ready(function() {
+        // Initialize the emoji picker on the message input
+        $('.message-input').emojioneArea({
+          pickerPosition: 'right',   // Set the position of the picker
+          tonesStyle: 'bullet',      // Enable bullet style for skin tone picker
+          categories: false,         // Disable categories in the emoji picker
+          search: true,              // Enable emoji search
+          filterPosition: 'bottom',  // Move search bar to the bottom of the picker
+        });
+
+        // When the emoji button is clicked
+        $('#emoji').click(function() {
+          // Open the emoji picker
+          $('.message-input').emojioneArea('showPicker');
+        });
+
+        // Optional: Hide the emoji picker if clicked outside
+        $(document).click(function(e) {
+          if (!$(e.target).closest('#emoji').length && !$(e.target).closest('.emojionearea').length) {
+            $('.emojionearea').emojioneArea('hidePicker');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

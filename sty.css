@@ -1,0 +1,55 @@
+body{
+    background-image: url(./images/JackSparrow.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+
+}
+p{
+   color: aliceblue;
+    text-align: center;
+    font-size: large;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 95px;
+    font: Arial, sans-serif;
+    text-align: center;
+
+}
+a{
+    text-decoration: none;
+}
+button{
+    
+    width:100px;
+    height: 50px;
+    color: rgb(192, 255, 220);
+    background-color: rgb(18, 33, 61);;
+    border-radius: 25px;
+
+
+} 
+
+  
+
+div {
+    
+    padding-top: 10px;
+    margin: auto;
+    width:100px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+  }  
+  div img{
+    width: 500px;
+    height:500px;
+    margin-bottom:20px;
+  }
