@@ -2,8 +2,7 @@ const chatBody = document.querySelector(".chat-body");
 const messageInput = document.querySelector(".message-input");
 const sendMessageButton = document.querySelector("#send-message");
 const fileInput = document.querySelector("#file-input");
-
-const API_KEY = "AIzaSyC6-9bN1M7dWC0n1E7jaeBpz8KjAm4pgSQ"; // Replace with your actual API key
+const API_KEY =""//Your api key
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 const userData = {
